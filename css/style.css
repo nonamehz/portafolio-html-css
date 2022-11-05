@@ -7,6 +7,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 *,
@@ -45,8 +46,8 @@ button {
 
 /* Utils */
 .container {
-    width: 90%;
     margin: 0 auto;
+    width: 90%;
 }
 
 @media (min-width: 768px) {
@@ -72,17 +73,17 @@ button {
 }
 
 .btn {
-    font-weight: bold;
     border: var(--border);
     border-radius: 40px;
     background-color: var(--primaryColor);
     color: var(--secondaryColor);
+    font-weight: bold;
     padding: 10px 40px;
+    transition: all .3s ease;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
-    transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -90,22 +91,23 @@ button {
 }
 
 .btn:hover {
-    cursor: pointer;
     background-color: var(--secondaryColor);
     color: var(--primaryColor);
+    cursor: pointer;
 }
 
 /* Header */
 .header {
-    width: 100%;
-    position: fixed;
     background-color: var(--primaryColor);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 .navbar {
-    height: 70px;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 70px;
     justify-content: space-between;
 }
 
@@ -142,13 +144,13 @@ button {
 
 /* Hero */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: var(--primaryColor);
-    height: 600px;
     color: var(--secondaryColor);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -162,16 +164,16 @@ button {
 }
 
 .hero__social {
+    align-items: center;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    display: flex;
-    align-items: center;
     margin-top: 20px;
 }
 
 .hero__social>a {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
     margin-right: 10px;
 }
@@ -187,10 +189,10 @@ button {
     }
 
     .about-info {
-        justify-content: space-between;
         display: flex;
         flex-direction: column;
         flex: 0.4;
+        justify-content: space-between;
         margin-right: 20px;
     }
 
@@ -219,8 +221,8 @@ button {
 
 .section-title {
     font-size: 2rem;
-    margin-bottom: 30px;
     font-weight: bold;
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
@@ -248,10 +250,10 @@ button {
 }
 
 .progress {
-    overflow: hidden;
     border: var(--border);
     border-radius: 10px;
     height: 10px;
+    overflow: hidden;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -259,9 +261,9 @@ button {
 }
 
 .progress-bar {
-    width: 70%;
     background-color: var(--primaryColor);
     height: 10px;
+    width: 70%;
 }
 
 /* Projects */
@@ -289,9 +291,9 @@ button {
 }
 
 .projects-item {
-    position: relative;
     border: var(--border);
     min-height: 300px;
+    position: relative;
 }
 
 .projects-item:first-child {
@@ -303,42 +305,42 @@ button {
 }
 
 .project-info {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     background-image: url('../assets/pokedex-ss.png');
     background-position: center;
     background-size: cover;
-    z-index: 2;
-    display: grid;
     color: #FFFFFF;
-    text-align: center;
+    display: grid;
     font-size: 1.5rem;
     font-weight: bold;
+    height: 100%;
+    position: absolute;
     place-content: center;
+    text-align: center;
+    width: 100%;
+    z-index: 2;
 }
 
 .project-info::before {
-    content: '';
-    z-index: -1;
-    height: 100%;
-    width: 100%;
     background-color: rgba(0, 0, 0, .6);
+    content: '';
+    height: 100%;
     position: absolute;
+    width: 100%;
+    z-index: -1;
 }
 
 .project-more {
-    z-index: 3;
+    align-items: center;
+    background-color: var(--primaryColor);
+    display: flex;
+    height: 0px;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
     position: absolute;
     right: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primaryColor);
-    height: 0px;
     transition: all .3s ease;
-    overflow: hidden;
+    z-index: 3;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -356,8 +358,8 @@ button {
     }
 
     .contact>p {
-        margin-top: 20px;
         flex: 0.4;
+        margin-top: 20px;
     }
 
     .contact>form {
@@ -367,8 +369,8 @@ button {
 
 @media (min-width: 1024px) {
     .contact>p {
-        margin-top: 20px;
         flex: 0.5;
+        margin-top: 20px;
     }
 
     .contact>form {
@@ -414,18 +416,18 @@ button {
 }
 
 .contact-input:focus {
-    outline: none;
     box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+    outline: none;
     -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 .footer {
+    align-items: center;
     background-color: var(--primaryColor);
     color: var(--secondaryColor);
     display: flex;
-    align-items: center;
     justify-content: center;
     height: 70px;
 }
