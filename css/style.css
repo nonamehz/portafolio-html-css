@@ -305,7 +305,7 @@ button {
 }
 
 .project-info {
-    background-image: url('../assets/pokedex-ss.png');
+    /* background-image: url('../assets/pokedex-ss.png'); */
     background-position: center;
     background-size: cover;
     color: #FFFFFF;
